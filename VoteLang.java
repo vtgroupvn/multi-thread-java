@@ -20,17 +20,17 @@ public class VoteLang {
     /**
      * Array LangItem
      */
-    private LangItem[] _langs;
+    private static LangItem[] _langs;
     /**
      * Import languages
      * 
      * @param _langs 
      */
-    public void _importLang(LangItem[] _langs)
+    public static void _importLang(LangItem[] _langs)
     {
-        this._langs = new LangItem[_langs.length];
+        VoteLang._langs = new LangItem[_langs.length];
         for(int i = 0; i < _langs.length; i++){
-            this._langs[i] = _langs[i];
+            VoteLang._langs[i] = _langs[i];
         }
     }
     /**
@@ -39,19 +39,19 @@ public class VoteLang {
      * @param key
      * @return 
      */
-    public String __t(String key)
+    public static String __t(String key)
     {
         int found = 0;
         boolean hasLang = false;
-        for(int i = 0; i < this._langs.length; i++){
-            if (this._langs[i].key == key){
+        for(int i = 0; i < VoteLang._langs.length; i++){
+            if (VoteLang._langs[i].key == key){
                 found = i;
                 hasLang = true;
                 break;
             }
         }
         if (hasLang){
-            return this._langs[found].Value;
+            return VoteLang._langs[found].Value;
         }
         return key;
     }
@@ -62,7 +62,7 @@ public class VoteLang {
      * @param _args
      * @return 
      */
-    public String __p(String key, String[] _args)
+    public static String __p(String key, String[] _args)
     {
         //TODO: print_r from _args
         return key;
