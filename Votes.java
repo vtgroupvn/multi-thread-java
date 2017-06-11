@@ -18,6 +18,6 @@ public class Votes {
     public static void main(String[] args) {
         // TODO code application logic here
         ManageVotes votes = new ManageVotes();
-        votes.initVotes(5, 3);
+        votes.initVotes("Tacuong",5, 3);
     }
 }

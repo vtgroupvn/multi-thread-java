@@ -17,11 +17,13 @@ public class ManageVotes {
     private int choosePoint;
     private int totalPersonVoted;
     private InboxTicket PD;
+    private String _voter;
     /**
      * @param args the command line arguments
      */
-    public void initVotes(int totalTicket, int choosePoint)
+    public void initVotes(String _voter, int totalTicket, int choosePoint)
     {
+        this._voter = _voter;
         this.totalTicket = totalTicket;
         this.choosePoint = choosePoint;
         this.createVoteList();
@@ -56,7 +58,7 @@ public class ManageVotes {
         if (this.totalPersonVoted == this.totalTicket)
         {
             if (this.PD.getTotalPoint() >= this.choosePoint){
-                System.out.println("Total ticket: " + Integer.toString(this.totalPersonVoted) + ", Total point: " + Integer.toString(this.PD.getTotalPoint()) + " => Choose(end votes)");
+                System.out.println("Total ticket: " + Integer.toString(this.totalPersonVoted) + ", Total point: " + Integer.toString(this.PD.getTotalPoint()) + " for Voter:["+this._voter+"](end votes)");
             }else{
                 System.out.println("Total ticket: "+Integer.toString(this.totalPersonVoted) + ", Total point: " + Integer.toString(this.PD.getTotalPoint()) + " < " + Integer.toString(this.choosePoint) + " => Restart votes.");
                 this.PD.restoreInbox();
