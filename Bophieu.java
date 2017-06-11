@@ -27,8 +27,8 @@ public class Bophieu extends Thread {
    private person _person;
    private Thread t;
    private String threadName;
-   Homphieu  PD;
-   Baucu _me;
+   private Homphieu  PD;
+   private Baucu _me;
 
    Bophieu( String name,  Homphieu pd){
        threadName = name;
