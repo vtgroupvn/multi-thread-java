@@ -31,7 +31,7 @@ public class PushVote extends Thread {
             this.join();
         }catch(Exception e){
         }finally{ 
-            System.out.println("Person "+this._person.getPersonName()+" Inputted !");
+            System.out.println(VoteLang.__t("PERSON")+this._person.getPersonName() + VoteLang.__t("INPUTTED"));
             this._manager.isVoted();
             this._manager.checkVotes();
         }

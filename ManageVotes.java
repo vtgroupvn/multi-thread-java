@@ -48,8 +48,8 @@ public class ManageVotes {
             this.personList[i] = new Person();
             this.personList[i].writeName(Integer.toString(i+1));
             this.personList[i].writeChoise(this.choiceVoteValue());
-            System.out.println("Person: "+this.personList[i].getPersonName()+", ticket choice: " + Integer.toString(this.personList[i].voteValue()));
-            Ticket[i] = new PushVote( "Ticket - " + Integer.toString(i), this.PD );
+            System.out.println(VoteLang.__t("PERSON")+this.personList[i].getPersonName()+", " + VoteLang.__t("TICKETCHOICE") + Integer.toString(this.personList[i].voteValue()));
+            Ticket[i] = new PushVote( VoteLang.__t("TICKET") + Integer.toString(i), this.PD );
             Ticket[i].start(this.personList[i], this);
         }
     }
@@ -58,9 +58,9 @@ public class ManageVotes {
         if (this.totalPersonVoted == this.totalPerson)
         {
             if (this.PD.getTotalPoint() >= this.choosePoint){
-                System.out.println("Total ticket: " + Integer.toString(this.totalPersonVoted) + ", Total point: " + Integer.toString(this.PD.getTotalPoint()) + " for Voter:["+this._voter+"](end votes)");
+                System.out.println(VoteLang.__t("TOTAL-TICKET") + Integer.toString(this.totalPersonVoted) + ", " + VoteLang.__t("TOTAL-POINT") + Integer.toString(this.PD.getTotalPoint()) + VoteLang.__t("FOR-VOTER") +" ["+this._voter+"]" + VoteLang.__t("ENDVOTE"));
             }else{
-                System.out.println("Total ticket: "+Integer.toString(this.totalPersonVoted) + ", Total point: " + Integer.toString(this.PD.getTotalPoint()) + " < " + Integer.toString(this.choosePoint) + " => Restart votes.");
+                System.out.println(VoteLang.__t("TOTAL-TICKET") + Integer.toString(this.totalPersonVoted) + ", " + VoteLang.__t("TOTAL-POINT") + Integer.toString(this.PD.getTotalPoint()) + " < " + Integer.toString(this.choosePoint) + " => " + VoteLang.__t("VOTE-RESTART"));
                 this.PD.restoreInbox();
                 this.totalPersonVoted = 0;
                 this.createVoteList();

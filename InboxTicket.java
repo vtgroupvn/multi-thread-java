@@ -15,7 +15,7 @@ public class InboxTicket {
         try {
             this._pointTotal += _vote;         
         } catch (Exception e) {
-            System.out.println("Error push.");
+            System.out.println(VoteLang.__t("ERROR-PUSH"));
         }
     }
     public int getTotalPoint()

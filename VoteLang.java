@@ -20,7 +20,28 @@ public class VoteLang {
     /**
      * Array LangItem
      */
-    private static LangItem[] _langs;
+    private static LangItem[] _langs = new LangItem[0];
+     /**
+     * Add lang item
+     * 
+     * @param Lange 
+     */
+    public static void _addLange(LangItem Lang)
+    {
+        if (VoteLang._langs.length == 0)
+        {
+            VoteLang._langs = new LangItem[1];
+            VoteLang._langs[0] = Lang;
+        }else{
+            LangItem[] newArray = new LangItem[VoteLang._langs.length + 1];
+            for(int i = 0; i < VoteLang._langs.length; i++)
+            {
+                newArray[i] = VoteLang._langs[i];
+            }
+            newArray[VoteLang._langs.length] = Lang;
+            VoteLang._langs = newArray;
+        }
+    }
     /**
      * Import languages
      * 
@@ -28,7 +49,9 @@ public class VoteLang {
      */
     public static void _importLang(LangItem[] _langs)
     {
-        VoteLang._langs = new LangItem[_langs.length];
+        if (VoteLang._langs.length == 0){
+            VoteLang._langs = new LangItem[_langs.length];
+        }
         for(int i = 0; i < _langs.length; i++){
             VoteLang._langs[i] = _langs[i];
         }
