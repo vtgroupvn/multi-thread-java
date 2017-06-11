@@ -44,9 +44,9 @@ public class Votes {
         if (this.totalPersonVoted == this.totalTicket)
         {
             if (InboxTicket.pointTotal >= this.choosePoint){
-                System.out.println("Total ticket: " + Integer.toString(this.totalPersonVoted) + ", Total poit: " + Integer.toString(InboxTicket.pointTotal) + " => Choose(end votes)");
+                System.out.println("Total ticket: " + Integer.toString(this.totalPersonVoted) + ", Total point: " + Integer.toString(InboxTicket.pointTotal) + " => Choose(end votes)");
             }else{
-                System.out.println("Total ticket: "+Integer.toString(this.totalPersonVoted) + ", Total poit: " + Integer.toString(InboxTicket.pointTotal) + " < " + Integer.toString(this.choosePoint) + " => Restart votes.");
+                System.out.println("Total ticket: "+Integer.toString(this.totalPersonVoted) + ", Total point: " + Integer.toString(InboxTicket.pointTotal) + " < " + Integer.toString(this.choosePoint) + " => Restart votes.");
                 InboxTicket.pointTotal = 0;
                 this.totalPersonVoted = 0;
                 this.createVoteList();
