@@ -3,31 +3,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package baucu;
+package votes;
 import java.util.*;
+
 /**
  *
  * @author admin
  */
-public class person {
-    private String name;
-    private int phieubau;
-    public void ghitennguoibau(String name)
+public class Person {
+    private String personName;
+    private int voteValue;
+    public void writeName(String _personName)
     {
-        this.name = name;
+        this.personName = _personName;
     }
-    public void ghiphieubau()
+    public void writeChoise()
     {
         int min = 0;
         int max = 2;
-        this.phieubau = (int)(Math.random() * max) + min;
+        this.voteValue = (int)(Math.random() * max) + min;
     }
-    public String getName()
+    public String getPersonName()
     {
-        return this.name;
+        return this.personName;
     }
-    public int phieubau()
+    public int voteValue()
     {
-        return this.phieubau;
+        return this.voteValue;
     }
 }
