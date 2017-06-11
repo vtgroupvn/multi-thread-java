@@ -52,7 +52,7 @@ public class VoteLang {
         if (VoteLang._langs.length == 0){
             VoteLang._langs = new LangItem[_langs.length];
         }
-        for(int i = 0; i < _langs.length; i++){
+        for(int i = VoteLang._langs.length; i < _langs.length + VoteLang._langs.length; i++){
             VoteLang._langs[i] = _langs[i];
         }
     }
