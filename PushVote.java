@@ -8,6 +8,7 @@ import java.util.*;
 import votes.Person;
 import votes.Votes;
 import votes.InboxTicket;
+import votes.ManageVotes;
 /**
  *
  * @author admin
@@ -17,7 +18,7 @@ public class PushVote extends Thread {
    private Thread t;
    private String threadName;
    private InboxTicket  PD;
-   private Votes _manager;
+   private ManageVotes _manager;
 
    PushVote( String name,  InboxTicket pd){
        this.threadName = name;
@@ -36,7 +37,7 @@ public class PushVote extends Thread {
         }
      }
    }
-   public void start(Person _person, Votes _vote)
+   public void start(Person _person, ManageVotes _vote)
    {
       this._person = _person;
       this._manager = _vote;
