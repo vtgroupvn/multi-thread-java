@@ -48,7 +48,7 @@ public class ManageVotes {
             this.personList[i] = new Person();
             this.personList[i].writeName(Integer.toString(i+1));
             this.personList[i].writeChoise(this.choiceVoteValue());
-            System.out.println("Person: "+this.personList[i].getPersonName()+", ticket choise: " + Integer.toString(this.personList[i].voteValue()));
+            System.out.println("Person: "+this.personList[i].getPersonName()+", ticket choice: " + Integer.toString(this.personList[i].voteValue()));
             Ticket[i] = new PushVote( "Ticket - " + Integer.toString(i), this.PD );
             Ticket[i].start(this.personList[i], this);
         }
