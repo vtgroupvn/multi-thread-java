@@ -29,8 +29,7 @@ public class Votes {
         // TODO code application logic here
         this.personList = new Person[this.totalTicket];
         this.PD = new InboxTicket();
-        PushVote[] Ticket;
-        Ticket = new PushVote[this.totalTicket];
+        PushVote[] Ticket = new PushVote[this.totalTicket];
         for(int i = 0; i < this.totalTicket; i++){
             this.personList[i] = new Person();
             this.personList[i].writeName(Integer.toString(i+1));
