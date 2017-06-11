@@ -5,7 +5,7 @@
  */
 package votes;
 import votes.Person;
-import votes.Pushvote;
+import votes.PushVote;
 import votes.InboxTicket;
 /**
  *
@@ -28,14 +28,14 @@ public class Votes {
         // TODO code application logic here
         this.personList = new Person[this.totalTicket];
         InboxTicket PD = new InboxTicket();
-        Pushvote[] Ticket;
-        Ticket = new Pushvote[this.totalTicket];
+        PushVote[] Ticket;
+        Ticket = new PushVote[this.totalTicket];
         for(int i = 0; i < this.totalTicket; i++){
             this.personList[i] = new Person();
             this.personList[i].writeName(Integer.toString(i+1));
             this.personList[i].writeChoise();
             System.out.println("Person: "+this.personList[i].getPersonName()+", ticket choise: " + Integer.toString(this.personList[i].voteValue()));
-            Ticket[i] = new Pushvote( "Ticket - " + Integer.toString(i), PD );
+            Ticket[i] = new PushVote( "Ticket - " + Integer.toString(i), PD );
             Ticket[i].start(this.personList[i], this);
         }
     }

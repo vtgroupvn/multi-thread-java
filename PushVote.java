@@ -12,14 +12,14 @@ import votes.InboxTicket;
  *
  * @author admin
  */
-public class Pushvote extends Thread {
+public class PushVote extends Thread {
    private Person _person;
    private Thread t;
    private String threadName;
    private InboxTicket  PD;
    private Votes _manager;
 
-   Pushvote( String name,  InboxTicket pd){
+   PushVote( String name,  InboxTicket pd){
        this.threadName = name;
        this.PD = pd;
    }
