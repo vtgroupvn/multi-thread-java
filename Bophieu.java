@@ -31,8 +31,8 @@ public class Bophieu extends Thread {
    private Baucu _me;
 
    Bophieu( String name,  Homphieu pd){
-       threadName = name;
-       PD = pd;
+       this.threadName = name;
+       this.PD = pd;
    }
    public void run() {
      synchronized(PD) {
@@ -53,7 +53,7 @@ public class Bophieu extends Thread {
       this._me = _baucu;
       if (t == null)
       {
-         t = new Thread (this, threadName);
+         t = new Thread (this, this.threadName);
          t.start();
       }
    }
