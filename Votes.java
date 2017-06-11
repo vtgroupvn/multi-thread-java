@@ -27,7 +27,7 @@ public class Votes {
         VoteLang._addLange(new LangItem("FOR-VOTER", " for Voter:"));
         VoteLang._addLange(new LangItem("VOTE-RESTART", "Restart votes."));
         VoteLang._addLange(new LangItem("ERROR-PUSH", "Error push."));
-        VoteLang._addLange(new LangItem("INPUTTED", " Inputted!"));
+        VoteLang._addLange(new LangItem("VOTED", " Voted!"));
         ManageVotes votes = new ManageVotes();
         votes.initVotes("TaCuong[cuongvt2608@gmail.com]", 8, 4);
     }
