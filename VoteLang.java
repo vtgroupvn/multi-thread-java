@@ -39,7 +39,7 @@ public class VoteLang {
      * @param key
      * @return 
      */
-    public String __l(String key)
+    public String __t(String key)
     {
         int found = 0;
         boolean hasLang = false;
