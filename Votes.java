@@ -20,6 +20,12 @@ public class Votes {
     /**
      * @param args the command line arguments
      */
+    public int choiceVoteValue()
+    {
+        int min = 0;
+        int max = 2;
+        return (int)(Math.random() * max) + min;
+    }
     public void isVoted()
     {
         this.totalPersonVoted++;
@@ -33,7 +39,7 @@ public class Votes {
         for(int i = 0; i < this.totalTicket; i++){
             this.personList[i] = new Person();
             this.personList[i].writeName(Integer.toString(i+1));
-            this.personList[i].writeChoise();
+            this.personList[i].writeChoise(this.choiceVoteValue());
             System.out.println("Person: "+this.personList[i].getPersonName()+", ticket choise: " + Integer.toString(this.personList[i].voteValue()));
             Ticket[i] = new PushVote( "Ticket - " + Integer.toString(i), this.PD );
             Ticket[i].start(this.personList[i], this);

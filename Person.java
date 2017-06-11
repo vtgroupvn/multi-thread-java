@@ -11,24 +11,22 @@ import java.util.*;
  * @author admin
  */
 public class Person {
-    private String personName;
-    private int voteValue;
+    private String _personName;
+    private int _voteValue;
     public void writeName(String _personName)
     {
-        this.personName = _personName;
+        this._personName = _personName;
     }
-    public void writeChoise()
+    public void writeChoise(int _vote)
     {
-        int min = 0;
-        int max = 2;
-        this.voteValue = (int)(Math.random() * max) + min;
+        this._voteValue = _vote;
     }
     public String getPersonName()
     {
-        return this.personName;
+        return this._personName;
     }
     public int voteValue()
     {
-        return this.voteValue;
+        return this._voteValue;
     }
 }
