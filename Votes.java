@@ -18,16 +18,16 @@ public class Votes {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        VoteLang._addLange(new LangItem("PERSON", "Person: "));
-        VoteLang._addLange(new LangItem("TICKETCHOICE", "ticket choice: "));
-        VoteLang._addLange(new LangItem("TICKET", "Ticket - "));
-        VoteLang._addLange(new LangItem("TOTAL-TICKET", "Total ticket: "));
-        VoteLang._addLange(new LangItem("TOTAL-POINT", "Total point: "));
-        VoteLang._addLange(new LangItem("ENDVOTE", "(end votes)"));
-        VoteLang._addLange(new LangItem("FOR-VOTER", " for Voter:"));
-        VoteLang._addLange(new LangItem("VOTE-RESTART", "Restart votes."));
-        VoteLang._addLange(new LangItem("ERROR-PUSH", "Error push."));
-        VoteLang._addLange(new LangItem("VOTED", " Voted!"));
+        VoteLang._addLang(new LangItem("PERSON", "Person: "));
+        VoteLang._addLang(new LangItem("TICKETCHOICE", "ticket choice: "));
+        VoteLang._addLang(new LangItem("TICKET", "Ticket - "));
+        VoteLang._addLang(new LangItem("TOTAL-TICKET", "Total ticket: "));
+        VoteLang._addLang(new LangItem("TOTAL-POINT", "Total point: "));
+        VoteLang._addLang(new LangItem("ENDVOTE", "(end votes)"));
+        VoteLang._addLang(new LangItem("FOR-VOTER", " for Voter:"));
+        VoteLang._addLang(new LangItem("VOTE-RESTART", "Restart votes."));
+        VoteLang._addLang(new LangItem("ERROR-PUSH", "Error push."));
+        VoteLang._addLang(new LangItem("VOTED", " Voted!"));
         ManageVotes votes = new ManageVotes();
         votes.initVotes("TaCuong[cuongvt2608@gmail.com]", 8, 4);
     }

@@ -26,7 +26,7 @@ public class VoteLang {
      * 
      * @param Lange 
      */
-    public static void _addLange(LangItem Lang)
+    public static void _addLang(LangItem Lang)
     {
         if (VoteLang._langs.length == 0)
         {
