@@ -33,7 +33,7 @@ public class Baucu {
             this.danhsachnguoibau[i] = new person();
             this.danhsachnguoibau[i].ghitennguoibau(Integer.toString(i+1));
             this.danhsachnguoibau[i].ghiphieubau();
-            System.out.println("Người: "+this.danhsachnguoibau[i].getName()+", phiếu chọn: "+Integer.toString(this.danhsachnguoibau[i].getphieubau()));
+            System.out.println("Người: "+this.danhsachnguoibau[i].getName()+", phiếu chọn: "+Integer.toString(this.danhsachnguoibau[i].phieubau()));
             Phieu[i] = new Bophieu( "Phiếu - " + Integer.toString(i), PD );
             Phieu[i].start(this.danhsachnguoibau[i], this);
         }

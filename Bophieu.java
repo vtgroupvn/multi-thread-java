@@ -36,7 +36,7 @@ public class Bophieu extends Thread {
    }
    public void run() {
      synchronized(this.PD) {
-        this.PD.bophieu(this._person.getphieubau());  
+        this.PD.bophieu(this._person.phieubau());  
         try{
             this.join();
         }catch(Exception e){

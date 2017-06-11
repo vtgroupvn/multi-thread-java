@@ -26,7 +26,7 @@ public class person {
     {
         return this.name;
     }
-    public int getphieubau()
+    public int phieubau()
     {
         return this.phieubau;
     }
