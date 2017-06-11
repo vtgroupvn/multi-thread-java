@@ -11,7 +11,7 @@ import java.util.*;
  */
 public class person {
     private String name;
-    public int phieubau;
+    private int phieubau;
     public void ghitennguoibau(String name)
     {
         this.name = name;
@@ -25,5 +25,9 @@ public class person {
     public String getName()
     {
         return this.name;
+    }
+    public int getphieubau()
+    {
+        return this.phieubau;
     }
 }
