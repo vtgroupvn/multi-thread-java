@@ -42,7 +42,7 @@ public class Baucu {
     {
         if (this.songuoidabophieu == this.tongphieu)
         {
-            if (this.songuoidabophieu <= this.tongphieu && Homphieu.tongdiem >= this.trungcu){
+            if (Homphieu.tongdiem >= this.trungcu){
                 System.out.println("Tổng phiếu: " + Integer.toString(this.songuoidabophieu) + ", Tổng điểm: "+Integer.toString(Homphieu.tongdiem)+ " => Trúng cữ(kết thúc bầu cữ)");
             }else{
                 System.out.println("Tổng phiếu: "+Integer.toString(this.songuoidabophieu) + ", Tổng điểm: "+Integer.toString(Homphieu.tongdiem)+ " < 3 => Bầu lại từ đầu.");
