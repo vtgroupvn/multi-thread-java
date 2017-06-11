@@ -50,7 +50,7 @@ public class VoteLang {
                 break;
             }
         }
-        if (hasLang){
+        if (hasLang && VoteLang._langs.length > 0){
             return VoteLang._langs[found].Value;
         }
         return key;
