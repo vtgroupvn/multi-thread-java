@@ -6,6 +6,7 @@
 package votes;
 import votes.Person;
 import votes.Pushvote;
+import votes.InboxTicket;
 /**
  *
  * @author admin
