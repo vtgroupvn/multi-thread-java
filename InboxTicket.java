@@ -10,12 +10,20 @@ package votes;
  * @author admin
  */
 public class InboxTicket {
-    static int pointTotal;
+    private int _pointTotal;
     public void pushTicket(int _vote){
         try {
-            InboxTicket.pointTotal += _vote;         
+            this._pointTotal += _vote;         
         } catch (Exception e) {
             System.out.println("Error push.");
         }
+    }
+    public int getTotalPoint()
+    {
+        return this._pointTotal;
+    }
+    public void restoreInbox()
+    {
+        this._pointTotal = 0;
     }
 }
