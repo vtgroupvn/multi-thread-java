@@ -13,7 +13,7 @@ import votes.InboxTicket;
  */
 public class ManageVotes {
     private Person[] personList;
-    private int totalTicket;
+    private int totalPerson;
     private int choosePoint;
     private int totalPersonVoted;
     private InboxTicket PD;
@@ -21,10 +21,10 @@ public class ManageVotes {
     /**
      * @param args the command line arguments
      */
-    public void initVotes(String _voter, int totalTicket, int choosePoint)
+    public void initVotes(String _voter, int totalPerson, int choosePoint)
     {
         this._voter = _voter;
-        this.totalTicket = totalTicket;
+        this.totalPerson = totalPerson;
         this.choosePoint = choosePoint;
         this.createVoteList();
     }
@@ -41,10 +41,10 @@ public class ManageVotes {
     public void createVoteList()
     {
         // TODO code application logic here
-        this.personList = new Person[this.totalTicket];
+        this.personList = new Person[this.totalPerson];
         this.PD = new InboxTicket();
-        PushVote[] Ticket = new PushVote[this.totalTicket];
-        for(int i = 0; i < this.totalTicket; i++){
+        PushVote[] Ticket = new PushVote[this.totalPerson];
+        for(int i = 0; i < this.totalPerson; i++){
             this.personList[i] = new Person();
             this.personList[i].writeName(Integer.toString(i+1));
             this.personList[i].writeChoise(this.choiceVoteValue());
@@ -55,7 +55,7 @@ public class ManageVotes {
     }
     public void checkVotes()
     {
-        if (this.totalPersonVoted == this.totalTicket)
+        if (this.totalPersonVoted == this.totalPerson)
         {
             if (this.PD.getTotalPoint() >= this.choosePoint){
                 System.out.println("Total ticket: " + Integer.toString(this.totalPersonVoted) + ", Total point: " + Integer.toString(this.PD.getTotalPoint()) + " for Voter:["+this._voter+"](end votes)");
