@@ -28,7 +28,7 @@ public class Bophieu extends Thread {
    private Thread t;
    private String threadName;
    private Homphieu  PD;
-   private Baucu _me;
+   private Baucu _quanly;
 
    Bophieu( String name,  Homphieu pd){
        this.threadName = name;
@@ -42,15 +42,15 @@ public class Bophieu extends Thread {
         }catch(Exception e){
         }finally{ 
             System.out.println("Người "+this._person.getName()+" đã bỏ phiếu!");
-            this._me.dabophieu();
-            this._me.kiemphieu();
+            this._quanly.dabophieu();
+            this._quanly.kiemphieu();
         }
      }
    }
    public void start(person _person, Baucu _baucu)
    {
       this._person = _person;
-      this._me = _baucu;
+      this._quanly = _baucu;
       if (t == null)
       {
          t = new Thread (this, this.threadName);
